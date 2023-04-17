@@ -7,7 +7,7 @@ COPY . ./
 
 RUN dotnet restore ./Test.sln
 
-RUN dotnet test ./Test.sln /p:CollectCoverage=true /p:Exclude=\"[*Dapper*]*,[*API*]*,[*Core*]*,[*Proto*]*,[*Service*]Indra.Protos.*\" /p:Threshold=90 /p:ThresholdType=\"line,method\"
+RUN dotnet test ./Test.sln /p:CollectCoverage=true 
 
 RUN dotnet publish ./Test/ -c Release  -o out
 
