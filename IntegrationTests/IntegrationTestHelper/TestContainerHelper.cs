@@ -31,7 +31,6 @@ public static class TestContainerHelper
                 _dbContainer
                     = new MsSqlBuilder()
                     .WithImage(imageName)
-                    .WithDockerEndpoint("tcp://host.docker.internal")
                     .WithCleanUp(true)
                     .Build();
                 _isDbSetup = true;
